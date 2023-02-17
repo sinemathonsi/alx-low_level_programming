@@ -8,19 +8,27 @@
  */
 int main(void)
 {
-	int c = 0;
+	int ones = '0';
+	int tens = '0';
 
-	while (c < 10)
+	for (tens = '0'; tens <= '9'; tens++)
 	{
-		putchar(48 + c);
-		if (c != 9)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			putchar(',');
-			putchar(' ');
+			if (!((ones == tens) || (tens > ones)))
+			{
+				putchar(tens);
+				putchar(ones);
+				if (!(ones == '9' && tens == '&'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
-		c++;
 	}
 
 	putchar('\n');
+
 	return (0);
 }
