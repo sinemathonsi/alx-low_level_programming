@@ -2,6 +2,7 @@
 /**
  * main - Entry point
  *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -11,7 +12,8 @@ int main(void)
 	char d;
 
 	c = 'a';
-	d = 0;
+	d = 0
+		;
 	while
 		(d < 10) {
 			putchar(d + '0');
